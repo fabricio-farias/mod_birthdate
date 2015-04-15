@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="administrator">
+	<name>mod_birthdate</name>
+	<author>Fabricio Farias</author>
+	<creationDate>January 2014</creationDate>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>fabriciorelicario@gmail.com</authorEmail>
+	<authorUrl>www.isgh.org.br</authorUrl>
+	<version>2.5.0</version>
+	<description>MOD_BIRTHDATE_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_birthdate">mod_birthdate.php</filename>
+		<filename>mod_birthdate.xml</filename>
+                <filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_birthdate.ini</language>
+		<language tag="pt-BR">pt-BR.mod_birthdate.ini</language>
+	</languages>
+
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_BIRTHDATE_HTML" />
+	<config>
+		<fields name="params">
+                    
+                        <fieldset name="connection" label="MOD_BIRTHDATE_FIELDSET_CONNECTION_LABEL">
+                            
+                            <field name="spacer1" type="spacer" class="text"
+					label="MOD_BIRTHDATE_MODULE_CONNECTION_LABEL"
+				/>
+                            
+                             <field
+					name="mod_birthdate_host"
+					type="text"
+					label="MOD_BIRTHDATE_HOST_FIELD_LABEL"
+					description="MOD_BIRTHDATE_HOST_FIELD_DESC" />
+                             <field
+					name="mod_birthdate_port"
+					type="text"
+					label="MOD_BIRTHDATE_PORT_FIELD_LABEL"
+					description="MOD_BIRTHDATE_PORT_FIELD_DESC" />
+                             <field
+					name="mod_birthdate_dbname"
+					type="text"
+					label="MOD_BIRTHDATE_DBNAME_FIELD_LABEL"
+					description="MOD_BIRTHDATE_DBNAME_FIELD_DESC" />
+                             <field
+					name="mod_birthdate_user"
+					type="text"
+					label="MOD_BIRTHDATE_USER_FIELD_LABEL"
+					description="MOD_BIRTHDATE_USER_FIELD_DESC" />
+                             <field
+					name="mod_birthdate_password"
+					type="password"
+					label="MOD_BIRTHDATE_PASSWORD_FIELD_LABEL"
+					description="MOD_BIRTHDATE_PASSWORD_FIELD_DESC" />
+
+                        </fieldset>
+                        
+                        <fieldset name="button" label="MOD_BIRTHDATE_FIELDSET_BUTTON_LABEL">
+                            
+                            <field name="spacer2" type="spacer" class="text"
+					label="MOD_BIRTHDATE_MODULE_BUTTON_LABEL"
+				/>
+                            
+                             <field
+					name="modulebutton_title"
+					type="text"
+					label="MOD_BIRTHDATE_BUTTON_TITLE_LABEL"
+					description="MOD_BIRTHDATE_BUTTON_TITLE_DESC" />
+                             <field
+					name="modulebutton_link"
+					type="text"
+					label="MOD_BIRTHDATE_BUTTON_LINK_LABEL"
+					description="MOD_BIRTHDATE_BUTTON_LINK_DESC" />
+
+                        </fieldset>
+                    
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
